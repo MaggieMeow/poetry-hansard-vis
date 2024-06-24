@@ -13,6 +13,7 @@ viz_df[type_column_name] = viz_df[type_column_name].apply(lambda x: x if x in ['
 
 # Initialize Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 
 app.layout = html.Div([
@@ -93,4 +94,4 @@ def update_graph(selected_placenames, selected_years, selected_types, min_count,
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True, port=5002)
+    app.run_server(debug=True)
