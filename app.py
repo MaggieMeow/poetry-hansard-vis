@@ -100,7 +100,7 @@ def update_graph(selected_placenames, selected_years, selected_types, year_start
     # make stacked bar sorted by year
     filtered_df = filtered_df.sort_values(by=['placename','year','count_total'], ascending=[True, True, False])
     
-    fig = px.bar(filtered_df, x='placename', y='count_total', color=type_column_name,
+    fig = px.bar(filtered_df, x='placename', y='count_year', color=type_column_name,
                  barmode='group', hover_data=['year', 'count_year', 'count_total'])
     fig.update_layout(
         xaxis={'categoryorder': 'total descending'},
