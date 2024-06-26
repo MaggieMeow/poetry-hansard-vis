@@ -6,7 +6,7 @@ import pandas as pd
 
 viz_df = pd.read_csv('location_counts_by_year.csv', index_col=0)
 
-type_column_name = 'type' # Change to 'type_biased' for types biased towards australia.
+type_column_name = 'type_biased' # Change to 'type_biased' for types biased towards australia.
 
 # Normalize the 'type' values as specified
 #viz_df[type_column_name] = viz_df[type_column_name].apply(lambda x: x if x in ['continent', 'territory', 'region', 'country', 'state', 'city'] else 'others')
